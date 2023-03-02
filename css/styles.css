@@ -1,6 +1,6 @@
 /*
-Author: Maria Cruz
-Date: Current Date
+Author: Ayush Kanaujia
+Date: March 1st, 2023
 File Name: styles.css
 */
 
@@ -93,7 +93,7 @@ main p {
 }
 
 .round {
-    border-radius: 8px; 
+    border-radius: 8px;
 }
 
 #contact {
@@ -138,4 +138,72 @@ footer {
 footer a {
     color: #4645a8;
     text-decoration: none;
+}
+
+/*Media Query for Tablet viewport*/
+@media screen and (min-width: 550px), print{
+  /*Tablet viewport: show tab-desk class, hide mobile class */
+  .tab-desk{
+    display: block;
+  }
+  .mobile{
+    display: none;
+  }
+
+  /*Tablet viewport: style rule for header content */
+  span.tab-desk{
+    display: inline;
+  }
+
+  /*Tablet viewport: style rule for nav area*/
+  nav li{
+    border: none;
+    display: inline-block;
+    font-size: 1.25em;
+    border-right: 1px solid #e5e9fc;
+  }
+
+  nav li:last-child{
+    border-right: none;
+  }
+
+  nav li a{
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  /*Tablet viewport: Style rule for map*/
+  .map{
+    width:500px;
+    height: 450px;
+  }
+}
+/*Media query for Desktop viewport*/
+@media screen and (min-width:769px), print{
+  header{
+    padding: 2%;
+  }
+  /*Desktop viewport: style rules for main content */
+  #info{
+    margin-left: 5%;
+  }
+  main h3{
+    font-size: 1.5em;
+  }
+  #piano, #guitar, #violin{
+    width:29%;
+    float:left;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+/*Media Query for print*/
+@media print{
+  body{
+    background-color: #fff;
+    color: #000;
+  }
 }
